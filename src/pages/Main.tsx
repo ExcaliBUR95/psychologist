@@ -4,26 +4,17 @@ import { Requests } from "../shared/Requests";
 import { About } from "@/shared/About";
 import { Price } from "@/shared/Price";
 import { Header } from "@/shared/Header";
-import gsap from "gsap";
-import ScrollToPlugin from "gsap/ScrollToPlugin";
 import { useRef } from "react";
 import { Footer } from "@/shared/Footer";
 
 export function Main() {
-  gsap.registerPlugin(ScrollToPlugin);
-
   const artRef1 = useRef<HTMLDivElement>(null);
   const artRef2 = useRef(null);
   const artRef3 = useRef(null);
 
-  const scrollTo = (target: any) => {
-    if (target.current) {
-      gsap.to(window, {
-        duration: 1,
-        scrollTo: { y: target.current.offsetTop, autoKill: true },
-      });
-    }
-    return;
+  const scrollTo = (ref: any) => {
+    console.log(ref);
+    ref.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
   return (
     <div className="box-border">
