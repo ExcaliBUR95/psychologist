@@ -13,9 +13,9 @@ export function Main() {
   const artRef3 = useRef(null);
 
   const scrollTo = (ref: any) => {
-    console.log(ref);
     ref.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
+
   return (
     <div className="box-border">
       <Header
