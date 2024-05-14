@@ -1,16 +1,15 @@
 "use client";
-import React from "react";
-import { Requests } from "../shared/Requests";
+import React, { useRef } from "react";
+import { Requests } from "./Requests";
 import { About } from "@/shared/About";
 import { Price } from "@/shared/Price";
 import { Header } from "@/shared/Header";
-import { useRef } from "react";
 import { Footer } from "@/shared/Footer";
 
 export function Main() {
   const artRef1 = useRef<HTMLDivElement>(null);
-  const artRef2 = useRef(null);
-  const artRef3 = useRef(null);
+  const artRef2 = useRef<HTMLDivElement>(null);
+  const artRef3 = useRef<HTMLDivElement>(null);
 
   const scrollTo = (ref: any) => {
     ref.current?.scrollIntoView({ behavior: "smooth", block: "start" });

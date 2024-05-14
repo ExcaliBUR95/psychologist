@@ -1,7 +1,7 @@
-import React from "react";
 import { Main } from "@/shared/Main";
+import React from "react";
 
-export function MainPage() {
+export default function MainPage() {
   return (
     <>
       <Main />
